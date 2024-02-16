@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellLessonStep2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:ShellLessonStep2.Views"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <!-- More than one Flyout item with multiple tabs-->
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Tabs 1,2">
+        <ShellContent
+            Title="Tab1" Icon="icon1.png"
+            ContentTemplate="{DataTemplate views:Page1}"
+            Route="Tab1" />
+        <ShellContent 
+                Title="Tab2" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:Page2}"
+                Route="Tab2" />
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Tabs 3,4">
+        <ShellContent
+                Title="Tab3" Icon="icon3.png"
+                ContentTemplate="{DataTemplate views:Page3}"
+                Route="Tab3" />
+        <ShellContent
+            Title="Tab4" Icon="icon4.png"
+            ContentTemplate="{DataTemplate views:Page4}"
+            Route="Tab4" />
+    </FlyoutItem>
+    <MenuItem
+        Command="{Binding InfoCommand}"
+        IconImageSource="info.png"
+        Text="About" />
+
+
+    <!-- Flyout item with multiple tabs-->
+    <!--<FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="tabs">
+        <ShellContent
+            Title="Tab1" Icon="icon1.png"
+            ContentTemplate="{DataTemplate views:Page1}"
+            Route="Tab1" />
+        <ShellContent 
+                Title="Tab2" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:Page2}"
+                Route="Tab2" />
+        <ShellContent
+                Title="Tab3" Icon="icon3.png"
+                ContentTemplate="{DataTemplate views:Page3}"
+                Route="Tab3" />
+        <ShellContent
+            Title="Tab4" Icon="icon4.png"
+            ContentTemplate="{DataTemplate views:Page4}"
+            Route="Tab4" />
+    </FlyoutItem>
+    <MenuItem
+        Command="{Binding InfoCommand}"
+        IconImageSource="info.png"
+        Text="About" />-->
+    
+    <!-- Bottom tabs-->
+    <!--<TabBar>
+    <ShellContent
+            Title="Tab1" Icon="icon1.png"
+            ContentTemplate="{DataTemplate views:Page1}"
+            Route="Tab1" />
+        <ShellContent
+                Title="Tab2" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:Page2}"
+                Route="Tab2" />
+        <ShellContent
+                Title="Tab3" Icon="icon3.png"
+                ContentTemplate="{DataTemplate views:Page3}"
+                Route="Tab3" />
+    <ShellContent
+            Title="Tab4" Icon="icon4.png"
+            ContentTemplate="{DataTemplate views:Page4}"
+            Route="Tab4" />
+    </TabBar>-->
+    
+    <!-- Bottom and top tabs-->
+    
+    <!--<TabBar>
+        
+        <ShellContent
+            Title="Tab1" Icon="icon1.png"
+            ContentTemplate="{DataTemplate views:Page1}"
+            Route="Tab1" />
+        <Tab Title="Tab2,3" Icon="icon2.png" Route="Tabs2_3">
+            
+            <ShellContent
+                Title="Tab2" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:Page2}"
+                Route="Tab2" />
+            <ShellContent
+                Title="Tab3" Icon="icon3.png"
+                ContentTemplate="{DataTemplate views:Page3}"
+                Route="Tab3" />
+        </Tab>
+        <ShellContent
+            Title="Tab4" Icon="icon4.png"
+            ContentTemplate="{DataTemplate views:Page4}"
+            Route="Tab4" />
+    </TabBar>-->
+    
+    
+</Shell>
