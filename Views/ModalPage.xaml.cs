@@ -1,14 +1,14 @@
 namespace ShellLessonStep2.Views;
 
-public partial class Page3 : ContentPage
+public partial class ModalPage : ContentPage
 {
-	public Page3()
+	public ModalPage()
 	{
 		InitializeComponent();
 	}
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("modalPage");
+		Shell.Current.Navigation.PopModalAsync();
     }
 }
