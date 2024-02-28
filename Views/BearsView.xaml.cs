@@ -1,8 +1,8 @@
 namespace ShellLessonStep2.Views;
 
-public partial class Page4 : ContentPage
+public partial class BearsView : ContentPage
 {
-	public Page4()
+	public BearsView()
 	{
 		InitializeComponent();
 	}

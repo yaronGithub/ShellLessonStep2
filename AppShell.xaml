@@ -8,25 +8,25 @@
 
 
     <!-- More than one Flyout item with multiple tabs-->
-    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Tabs 1,2">
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Domestic">
         <ShellContent
-            Title="Tab1" Icon="icon1.png"
-            ContentTemplate="{DataTemplate views:Page1}"
+            Title="Cats" Icon="icon1.png"
+            ContentTemplate="{DataTemplate views:CatsView}"
             Route="Tab1" />
         <ShellContent 
-                Title="Tab2" Icon="icon2.png"
-                ContentTemplate="{DataTemplate views:Page2}"
+                Title="Dogs" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:DogsView}"
                 Route="Tab2" />
-    </FlyoutItem>
-    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Route="tabs" Title="Tabs 3,4">
-        <ShellContent
-                Title="Tab3" Icon="icon3.png"
-                ContentTemplate="{DataTemplate views:Page3}"
-                Route="Tab3" />
-        <ShellContent
-            Title="Tab4" Icon="icon4.png"
-            ContentTemplate="{DataTemplate views:Page4}"
-            Route="Tab4" />
+        <Tab>
+            <ShellContent
+                Title="Cats" Icon="icon1.png"
+                ContentTemplate="{DataTemplate views:}"
+                Route="Tab1" />
+            <ShellContent 
+                Title="Dogs" Icon="icon2.png"
+                ContentTemplate="{DataTemplate views:DogsView}"
+                Route="Tab2" />
+        </Tab>
     </FlyoutItem>
     <MenuItem
         Command="{Binding InfoCommand}"

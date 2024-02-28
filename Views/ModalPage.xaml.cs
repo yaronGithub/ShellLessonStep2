@@ -6,9 +6,4 @@ public partial class ModalPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-		Shell.Current.Navigation.PopModalAsync();
-    }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonkeyCollection.Views.MonkeysView"
+             Title="MonkeysView">
+    <VerticalStackLayout>
+        <Entry Placeholder="Type Location Here..." Text="{Binding Location}"></Entry>
+        <CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="VerticalList"
+                SelectedItem="{Binding SelectedMonkey}"
+                SelectionMode="Single" SelectionChangedCommand="{Binding SingleSelectCommand}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="1"
+                               Text="{Binding Name}"
+                               FontAttributes="Bold"/>
+                        <Image Grid.Column="0" Grid.Row="0"
+                               Source="{Binding ImageUrl}"
+                               HorizontalOptions="Center"/>
+                        <Label Grid.Column="1" Grid.Row="0"
+                               Text="{Binding Details}"
+                               FontAttributes="Italic"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
